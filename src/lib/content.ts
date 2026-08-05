@@ -105,29 +105,29 @@ export const processSteps = [
   },
 ];
 
-// export const testimonials = [
-//   {
-//     quote:
-//       "Cada imagen transmite una calma difícil de encontrar. Todo se sintió natural, elegante y profundamente humano.",
-//     name: "Clara M.",
-//     role: "Retrato personal",
- //    image:
-//       "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
-//   },
-//   {
-//     quote:
-//       "La energía de la sesión fue serena y hermosa. La edición tiene una sensibilidad extraordinaria.",
-//     name: "Elena & Tomás",
- //     role: "Familias",
-//     image:
-//       "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=400&q=80",
-//   },
-//   {
-//     quote:
-//       "Fue una experiencia muy cuidada, clara y elegante. Lo que recibí superó cualquier expectativa.",
-//     name: "Sofía R.",
-//     role: "Marca personal",
-//     image:
-//       "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=400&q=80",
-//   },
-// ];
+export const testimonials = [
+  {
+    quote:
+      "Cada imagen transmite una calma difícil de encontrar. Todo se sintió natural, elegante y profundamente humano.",
+    name: "Clara M.",
+    role: "Retrato personal",
+    image:
+      "https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    quote:
+      "La energía de la sesión fue serena y hermosa. La edición tiene una sensibilidad extraordinaria.",
+    name: "Elena & Tomás",
+    role: "Familias",
+    image:
+      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=400&q=80",
+  },
+  {
+    quote:
+      "Fue una experiencia muy cuidada, clara y elegante. Lo que recibí superó cualquier expectativa.",
+    name: "Sofía R.",
+    role: "Marca personal",
+    image:
+      "https://images.unsplash.com/photo-1488426862026-3ee34a7d66df?auto=format&fit=crop&w=400&q=80",
+  },
+];
