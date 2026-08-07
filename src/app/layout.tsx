@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Roble Rojo | Fotografía editorial",
+  title: "Roble Rojo",
   description: "Una web premium de fotografía editorial con estética minimalista, cálida y elegante.",
 };
 

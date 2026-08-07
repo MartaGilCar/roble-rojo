@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 export function Cta() {
   return (
-    <section id="contact" className="bg-[#F5F1EA] py-24 sm:py-28 lg:py-32">
+    <section id="contact" className="bg-[#F5F1EA] py-24 sm:py-28 lg:py-32 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
         <motion.div
           initial={{ opacity: 0, y: 18 }}

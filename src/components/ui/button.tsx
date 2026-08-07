@@ -1,14 +1,24 @@
 import { clsx } from "clsx";
 import { twMerge } from "tailwind-merge";
 
-type ButtonProps = {
+type BaseButtonProps = {
   children: React.ReactNode;
-  href?: string;
   variant?: "primary" | "secondary";
   className?: string;
 };
 
-export function Button({ children, href, variant = "primary", className }: ButtonProps) {
+type AnchorButtonProps = BaseButtonProps & React.AnchorHTMLAttributes<HTMLAnchorElement> & {
+  href: string;
+  type?: never;
+};
+
+type NativeButtonProps = BaseButtonProps & React.ButtonHTMLAttributes<HTMLButtonElement> & {
+  href?: never;
+};
+
+export function Button(props: AnchorButtonProps | NativeButtonProps) {
+  const { children, variant = "primary", className, ...rest } = props;
+
   const baseClasses =
     "inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-medium transition-all duration-300";
 
@@ -19,13 +29,20 @@ export function Button({ children, href, variant = "primary", className }: Butto
 
   const classes = twMerge(clsx(baseClasses, variantClasses[variant], className));
 
-  if (href) {
+  if ("href" in props && props.href) {
+    const { href, type, ...anchorProps } = rest as AnchorButtonProps;
     return (
-      <a href={href} className={classes}>
+      <a href={href} className={classes} {...anchorProps}>
         {children}
       </a>
     );
   }
 
-  return <button className={classes}>{children}</button>;
+  const { type = "button", ...buttonProps } = rest as NativeButtonProps;
+
+  return (
+    <button type={type} className={classes} {...buttonProps}>
+      {children}
+    </button>
+  );
 }

@@ -26,14 +26,14 @@ export function Hero() {
           transition={{ duration: 0.8, ease: "easeOut" }}
  
         >
-          <p className="mb-4 text-[0.7rem] uppercase tracking-[0.35em] text-[#8B7D67]">
+          {/* <p className="mb-4 text-[0.7rem] uppercase tracking-[0.35em] text-[#0d0a07]">
             Fotografía en Cantabria
-          </p>
-          <h1 className="font-[Cormorant_Garamond] text-4xl leading-[1.05] text-[#3A322B] sm:text-5xl lg:text-6xl">
-            Capturamos la luz que no se repite.
+          </p> */}
+          <h1 className="font-[Cormorant_Garamond] text-4xl leading-[1.05] text-[#0d0a07] sm:text-5xl lg:text-6xl">
+            Fotografía en Cantabria
           </h1>
-          <p className="mt-5 max-w-xl text-base leading-7 text-[#6F6254] sm:text-lg">
-            Sesiones en la naturaleza, para personas que eligen habitarse desde la calma, la presencia y la intimidad. 
+          <p className="mt-5 max-w-xl text-base leading-7 text-[#0d0a07] sm:text-lg">
+            Sesiones en la naturaleza, para personas que eligen habitarse desde la calma y la presencia. 
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">

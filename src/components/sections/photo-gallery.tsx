@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import Image from "next/image";
+// usar etiqueta img para preservar la proporción completa de las imágenes
 import { motion } from "framer-motion";
 import { portfolioItems } from "@/lib/content";
 
@@ -22,13 +22,11 @@ export function PhotoGallery() {
               transition={{ duration: 0.6, delay: index * 0.06 }}
               className="group overflow-hidden border border-[#E8E0D4] bg-[#F5F1EA]"
             >
-              <div className="relative h-80 sm:h-96">
-                <Image
+              <div className="w-full">
+                <img
                   src={item.image}
                   alt={item.title}
-                  fill
-                  sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition duration-500 group-hover:scale-[1.02]"
+                  className="w-full h-auto object-contain transition duration-500 group-hover:scale-[1.02]"
                 />
               </div>
             </motion.div>
