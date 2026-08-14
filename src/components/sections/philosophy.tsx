@@ -17,14 +17,15 @@ export function Philosophy() {
         >
           <p className="text-lg leading-8 text-[#2B2927]/75 mb-4">Mi nombre es Marta y siempre he amado la fotografía.</p>
 
-          <div className="overflow-hidden border border-[#EBE1D3] bg-[#F5F1EA] mb-4">
-            <div className="relative h-[320px] sm:h-[420px]">
+          <div className="overflow-hidden border border-[#EBE1D3] bg-transparent mb-4">
+            <div className="relative h-[420px]">
               <Image
                 src="/yo2.jpeg"
                 alt="Estudio de fotografía con luz suave"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
-                className="object-contain object-center"
+                className="object-cover"
+                style={{ objectPosition: "50% 35%" }}
               />
             </div>
           </div>
