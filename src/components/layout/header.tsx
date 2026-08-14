@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
+import scrollToIdWithOffset from "@/lib/scroll";
 import { navigation } from "@/lib/content";
 
 export function Header() {
@@ -25,7 +26,14 @@ export function Header() {
       }`}
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 sm:px-8 lg:px-10">
-        <Link href="#top" className="text-sm font-medium uppercase tracking-[0.35em] text-[#2B2927]">
+        <Link
+          href="#top"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToIdWithOffset("top", 0);
+          }}
+          className="text-sm font-medium uppercase tracking-[0.35em] text-[#2B2927]"
+        >
           Roble Rojo
         </Link>
 
@@ -37,7 +45,14 @@ export function Header() {
           ))}
         </nav>
 
-        <a href="#contact" className="rounded-full border border-[#D8CDB8] px-4 py-2 text-sm text-[#2B2927] transition hover:bg-[#F5F1EA]">
+        <a
+          href="#contact"
+          onClick={(e) => {
+            e.preventDefault();
+            scrollToIdWithOffset("contact");
+          }}
+          className="rounded-full border border-[#D8CDB8] px-4 py-2 text-sm text-[#2B2927] transition hover:bg-[#F5F1EA]"
+        >
           Reservar sesión
         </a>
       </div>

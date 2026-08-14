@@ -4,6 +4,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { heroHighlights } from "@/lib/content";
 import { Button } from "@/components/ui/button";
+import scrollToIdWithOffset from "@/lib/scroll";
 import { Container } from "@/components/ui/container";
 
 export function Hero() {
@@ -37,7 +38,14 @@ export function Hero() {
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="#contact" variant="primary">
+            <Button
+              href="#contact"
+              variant="primary"
+              onClick={(e: any) => {
+                e.preventDefault();
+                scrollToIdWithOffset("contact");
+              }}
+            >
               Reservar sesión
             </Button>
             <a
