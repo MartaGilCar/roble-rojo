@@ -39,3 +39,18 @@ h3 {
 a {
   text-decoration: none;
 }
+
+/* Hide Next.js / devtools floating toggle on small screens */
+@media (max-width: 640px) {
+  .next-devtools,
+  #next-devtools,
+  [data-next-devtools],
+  .next-dev-overlay,
+  .next-dev-toolbar,
+  .next-dev-toggle {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+  }
+}

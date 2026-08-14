@@ -1,12 +1,9 @@
-// import { Cta } from "@/components/sections/cta";
 import { Hero } from "@/components/sections/hero";
 import { Philosophy } from "@/components/sections/philosophy";
 import { PhotoGallery } from "@/components/sections/photo-gallery";
-// import { PortfolioGrid } from "@/components/sections/portfolio-grid";
-import { ReservationSection } from "@/components/sections/reservation";
-// import { Testimonials } from "@/components/sections/testimonials";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
+import { Cta } from "@/components/sections/cta";
 
 export default function Home() {
   return (
@@ -16,9 +13,9 @@ export default function Home() {
       <PhotoGallery />
       <Philosophy />
       {/* <PortfolioGrid /> */}
-      <ReservationSection />
+      {/* <ReservationSection /> */}
       {/* <Testimonials /> */}
-      {/* <Cta /> */}
+      <Cta />
       <Footer />
     </main>
   );

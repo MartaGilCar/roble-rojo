@@ -1,6 +1,6 @@
 export const navigation = [
   { label: "Experiencias", href: "#portfolio" },
-  { label: "Filosofía", href: "#philosophy" },
+  { label: "Quién soy", href: "#philosophy" },
   { label: "Contacto", href: "#contact" },
 ];
 

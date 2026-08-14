@@ -8,7 +8,7 @@ import { contactFormSchema, sessionOptions, foundByOptions } from "@/lib/contact
 import type { ContactFormValues, SendContactEmailResult } from "@/types/contact";
 import { sendContactEmail } from "@/actions/sendContactEmail";
 import { Button } from "@/components/ui/button";
-import { FormItem, FormLabel, Input, Textarea, Select, Checkbox, FormMessage } from "@/components/ui/form";
+import { FormItem, FormLabel, FormDescription, Input, Textarea, Select, Checkbox, FormMessage } from "@/components/ui/form";
 
 
 export function ContactForm() {
@@ -134,7 +134,8 @@ export function ContactForm() {
         <div className="grid gap-6 sm:grid-cols-2">
           <FormItem>
             <FormLabel htmlFor="date">Fecha aproximada</FormLabel>
-            <Input id="date" placeholder="Mes o fecha aproximada" {...form.register("date")} />
+            <Input id="date" type="date" {...form.register("date")} />
+            <FormDescription>Selecciona una fecha estimada o utiliza la casilla si aún no está definida.</FormDescription>
             {form.formState.errors.date ? <FormMessage>{form.formState.errors.date.message}</FormMessage> : null}
           </FormItem>
           <FormItem>
