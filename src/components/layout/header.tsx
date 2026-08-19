@@ -1,17 +1,25 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import scrollToIdWithOffset from "@/lib/scroll";
 
-const navItems = [
-  { label: "Galería", href: "#gallery" },
-  { label: "Sobre mí", href: "#philosophy" },
-  { label: "Reservar sesión", href: "#contact" },
-];
-
 export function Header() {
+  const pathname = usePathname();
+  const isGalleryRoute = pathname === "/galeria" || pathname.startsWith("/galeria/");
+  const navItems = isGalleryRoute
+    ? [
+        { label: "Galería", href: "#gallery" },
+        { label: "Sobre mí", href: "#philosophy" },
+        { label: "Reservar sesión", href: "#contact" },
+      ]
+    : [
+        { label: "Galería", href: "/galeria" },
+        { label: "Sobre mí", href: "/#philosophy" },
+        { label: "Reservar sesión", href: "/#contact" },
+      ];
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement | null>(null);
@@ -44,6 +52,13 @@ export function Header() {
   }, [mobileMenuOpen]);
 
   const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("/#")) {
+      event.preventDefault();
+      setMobileMenuOpen(false);
+      window.location.href = href;
+      return;
+    }
+
     if (!href.startsWith("#")) return;
 
     event.preventDefault();
@@ -63,8 +78,13 @@ export function Header() {
     >
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 sm:px-6 lg:px-10">
         <Link
-          href="#top"
+          href={isGalleryRoute ? "/#gallery" : "#top"}
           onClick={(event) => {
+            if (isGalleryRoute) {
+              event.preventDefault();
+              window.location.href = "/#gallery";
+              return;
+            }
             event.preventDefault();
             scrollToIdWithOffset("top", 0);
           }}
