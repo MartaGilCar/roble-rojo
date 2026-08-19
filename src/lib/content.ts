@@ -119,12 +119,12 @@ export const storySessions: StorySession[] = [
     name: "ESTEFANÍA",
     location: "Bolonia",
     year: "2024",
-    intro: "Un atardecer cualquiera de Septiembre. Silencio, calma y olas.",
+    intro: "El último sol de septiembre. Sal, viento y una tarde sin prisa.",
     coverImage: "/estefania/bolonia3.jpg",
     alt: "Estefanía en Bolonia — sesión fotográfica Roble Rojo",
     gallery: [
       { type: "full", src: "/estefania/bolonia1.jpg", alt: "Estefanía caminando por Bolonia" },
-      { type: "text", text: "Una tarde entre calles, luz y movimiento." },
+      { type: "text", text: "Luz cálida, viento y el sonido de las olas." },
       { type: "double", srcs: ["/estefania/bolonia2.jpg", "/estefania/bolonia3.jpg"] },
       { type: "portrait", src: "/estefania/bolonia4.jpg", alt: "Retrato íntimo de Estefanía en Bolonia" },
       { type: "full", src: "/estefania/bolonia5.jpg", alt: "Momento final de la sesión de Estefanía en Bolonia" },
@@ -135,12 +135,12 @@ export const storySessions: StorySession[] = [
     name: "AIALA",
     location: "Cantabria",
     year: "2025",
-    intro: "Entre árboles, luz y calma.",
+    intro: "Entre árboles, luz y el silencio de un bosque.",
     coverImage: "/aiala/aiala5.jpg",
     alt: "Aiala en Cantabria — sesión fotográfica Roble Rojo",
     gallery: [
       { type: "full", src: "/aiala/aiala1.jpg", alt: "Aiala caminando por Cantabria" },
-      { type: "text", text: "Una tarde entre árboles, luz y calma." },
+      { type: "text", text: "Un lugar para bajar el ritmo y dejarse llevar." },
       { type: "double", srcs: ["/aiala/aiala2.jpg", "/aiala/aiala3.jpg"] },
       { type: "portrait", src: "/aiala/aiala4.jpg", alt: "Retrato íntimo de Aiala en Cantabria" },
       { type: "full", src: "/aiala/aiala5.jpg", alt: "Momento final de la sesión de Aiala en Cantabria" },
@@ -151,19 +151,35 @@ export const storySessions: StorySession[] = [
     name: "PALOMA",
     location: "Tarifa",
     year: "2024",
-    intro: "Luz y viento.",
+    intro: "Viento, piel y libertad. Una tarde en Tarifa.",
     coverImage: "/paloma/paloma1.jpg",
     alt: "Paloma en Tarifa — sesión fotográfica Roble Rojo",
     gallery: [
       { type: "full", src: "/paloma/paloma1.jpg", alt: "Paloma en Tarifa bajo la luz del atardecer" },
-      { type: "text", text: "Luz, viento y un paisaje que acompaña cada gesto." },
+      { type: "text", text: "Dejar que el cuerpo siga el ritmo del viento." },
       { type: "double", src: "/paloma/paloma5.jpg", alt: "Paloma caminando por la playa de Tarifa" },
       { type: "portrait", src: "/paloma/paloma5.jpg", alt: "Retrato de Paloma en paisaje costero" },
       { type: "portrait", src: "/paloma/paloma3.jpg", alt: "Retrato de Paloma en paisaje costero" },
       { type: "portrait", src: "/paloma/paloma4.jpg", alt: "Paisaje y figura de Paloma junto al mar" },
-      { type: "full", src: "/paloma/paloma6.jpg", alt: "Retrato de Paloma en paisaje costero" }
+      { type: "full", src: "/paloma/paloma2.jpg", alt: "Retrato de Paloma en paisaje costero" }
     ],
   },
+  {
+  slug: "sara-bosque-rio",
+  name: "SARA",
+  location: "Cantabria",
+  year: "2026",
+  intro: "Movimiento, naturaleza y una forma de habitar el cuerpo.",
+  coverImage: "/sara/sara6.jpg",
+  alt: "Sara en Cantabria — sesión fotográfica Roble Rojo",
+  gallery: [
+    { type: "full", src: "/sara/sara4.jpg", alt: "Sara entre el bosque en Cantabria" },
+    { type: "text", text: "Entre la danza y la quietud, el cuerpo encuentra su propio lenguaje." },
+    { type: "full", src: "/sara/sara2.avif", alt: "Sara junto al río en Cantabria" },
+    { type: "portrait", src: "/sara/sara5.jpg", alt: "Retrato de Sara en el bosque" },
+    { type: "double", srcs: ["/sara/sara1.avif", "/sara/sara3.avif"] },
+  ],
+},
 ];
 
 export function getStoryBySlug(slug: string) {
