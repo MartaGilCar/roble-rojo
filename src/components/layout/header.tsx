@@ -53,6 +53,15 @@ export function Header() {
 
   const handleAnchorClick = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("/#")) {
+      const id = href.replace(/^\/#/, "");
+
+      if (pathname === "/") {
+        event.preventDefault();
+        setMobileMenuOpen(false);
+        scrollToIdWithOffset(id);
+        return;
+      }
+
       event.preventDefault();
       setMobileMenuOpen(false);
       window.location.href = href;
