@@ -20,7 +20,7 @@ export function Philosophy() {
           <div className="overflow-hidden border border-[#EBE1D3] bg-transparent mb-4">
             <div className="relative h-[420px]">
               <Image
-                src="/yo2.avif"
+                src="/yobandw.jpeg"
                 alt="Estudio de fotografía con luz suave"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
