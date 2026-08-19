@@ -20,7 +20,7 @@ export function PhotoGallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.6, delay: index * 0.06 }}
-              className="group relative h-full overflow-hidden border border-[#E8E0D4] bg-transparent"
+              className="group relative overflow-hidden border border-[#E8E0D4] bg-transparent"
               style={{ aspectRatio: "4 / 5" }}
             >
               <Image
@@ -28,7 +28,7 @@ export function PhotoGallery() {
                 alt={item.alt ?? item.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
-                className="h-full w-full object-cover object-center transition duration-500 group-hover:scale-[1.02]"
+                className="object-cover object-center transition duration-500 group-hover:scale-[1.02]"
                 style={{ objectPosition: "50% 35%" }}
               />
             </motion.div>
