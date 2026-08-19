@@ -1,14 +1,14 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+const Motion = dynamic(() => import("@/components/ui/MotionClient"));
 import { Section } from "@/components/ui/section";
 
 export function Philosophy() {
   return (
     <Section id="philosophy" eyebrow="Sobre mi" title="Una forma de volver a recordar quiénes éramos">
       <div className="grid items-center gap-12 lg:grid-cols-[0.95fr_1.05fr]">
-        <motion.div
+        <Motion
+          tag="div"
           initial={{ opacity: 0, x: -16 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: true, amount: 0.2 }}
@@ -20,7 +20,7 @@ export function Philosophy() {
           <div className="overflow-hidden border border-[#EBE1D3] bg-transparent mb-4">
             <div className="relative h-[420px]">
               <Image
-                src="/yo2.jpeg"
+                src="/yo2.avif"
                 alt="Estudio de fotografía con luz suave"
                 fill
                 sizes="(max-width: 1024px) 100vw, 50vw"
@@ -38,7 +38,7 @@ export function Philosophy() {
 
           <p className="text-lg leading-8 text-[#2B2927]/75">Roble Rojo nace de esa forma de mirar. De mi amor por la naturaleza, por las personas, y por esas pequeñas historias que merecen ser recordadas.</p>
 
-        </motion.div>
+        </Motion>
       </div>
     </Section>
   );

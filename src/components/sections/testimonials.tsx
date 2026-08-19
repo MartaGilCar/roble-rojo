@@ -1,7 +1,6 @@
-"use client";
-
 import Image from "next/image";
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+const Motion = dynamic(() => import("@/components/ui/MotionClient"));
 import { testimonials } from "@/lib/content";
 import { Section } from "@/components/ui/section";
 
@@ -10,8 +9,9 @@ export function Testimonials() {
     <Section id="testimonials" eyebrow="Testimonios" title="Palabras de quienes vivieron la experiencia.">
       <div className="grid gap-8 lg:grid-cols-3">
         {testimonials.map((item, index) => (
-          <motion.div
+          <Motion
             key={item.name}
+            tag="div"
             initial={{ opacity: 0, y: 18 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
@@ -28,7 +28,7 @@ export function Testimonials() {
               </div>
             </div>
             <p className="mt-5 text-base leading-8 text-[#2B2927]/75">“{item.quote}”</p>
-          </motion.div>
+          </Motion>
         ))}
       </div>
     </Section>

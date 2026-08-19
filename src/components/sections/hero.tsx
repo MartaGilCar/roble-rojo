@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { heroHighlights } from "@/lib/content";
 import { Button } from "@/components/ui/button";
 import scrollToIdWithOffset from "@/lib/scroll";
 import { Container } from "@/components/ui/container";
@@ -11,16 +10,16 @@ export function Hero() {
   return (
     <section id="top" className="relative min-h-screen overflow-hidden bg-[#FAF7F2]">
       <Image
-        src="/nature.jpg"
+        src="/nature.avif"
         alt="Mujer en naturaleza con luz suave"
         fill
         priority
         sizes="100vw"
-        className="object-cover object-[center_30%]"
+        className="absolute inset-0 z-0 h-full w-full object-cover object-[center_30%]"
       />
-      <div className="absolute inset-0 bg-[linear-gradient(90deg,rgba(250,243,232,0.86)_0%,rgba(250,243,232,0.42)_42%,rgba(250,243,232,0.08)_100%)]" />
+      <div className="absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(250,243,232,0.86)_0%,rgba(250,243,232,0.42)_42%,rgba(250,243,232,0.08)_100%)]" />
 
-      <Container className="relative flex min-h-screen items-end py-24 sm:py-28 lg:py-32">
+      <Container className="relative z-20 flex min-h-screen items-end py-24 sm:py-28 lg:py-32">
         <motion.div
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}

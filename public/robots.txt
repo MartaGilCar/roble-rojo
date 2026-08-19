@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+# If you deploy the site, update the Sitemap value to the full absolute URL of your sitemap,
+# e.g. https://tu-dominio.com/sitemap.xml
+Sitemap: /sitemap.xml

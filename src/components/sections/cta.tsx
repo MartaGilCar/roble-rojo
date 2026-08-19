@@ -1,13 +1,13 @@
-"use client";
-
-import { motion } from "framer-motion";
+import dynamic from "next/dynamic";
+const Motion = dynamic(() => import("@/components/ui/MotionClient"));
 import { Button } from "@/components/ui/button";
 
 export function Cta() {
   return (
     <section id="contact" className="bg-[#F5F1EA] py-24 sm:py-28 lg:py-32 scroll-mt-24 sm:scroll-mt-28 lg:scroll-mt-32">
       <div className="mx-auto max-w-7xl px-6 sm:px-8 lg:px-10">
-        <motion.div
+        <Motion
+          tag="div"
           initial={{ opacity: 0, y: 18 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.25 }}
@@ -33,7 +33,7 @@ export function Cta() {
               </Button>
             </div>
           </div>
-        </motion.div>
+        </Motion>
       </div>
     </section>
   );
