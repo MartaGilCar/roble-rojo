@@ -11,12 +11,12 @@ export function Header() {
   const isGalleryRoute = pathname === "/galeria" || pathname.startsWith("/galeria/");
   const navItems = isGalleryRoute
     ? [
-        { label: "Galería", href: "#gallery" },
-        { label: "Sobre mí", href: "#philosophy" },
-        { label: "Reservar sesión", href: "#contact" },
+        { label: "Galería", href: "/#gallery" },
+        { label: "Sobre mí", href: "/#philosophy" },
+        { label: "Reservar sesión", href: "/#contact" },
       ]
     : [
-        { label: "Galería", href: "/galeria" },
+        { label: "Galería", href: "/#gallery" },
         { label: "Sobre mí", href: "/#philosophy" },
         { label: "Reservar sesión", href: "/#contact" },
       ];
