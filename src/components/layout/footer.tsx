@@ -12,9 +12,9 @@ export function Footer() {
           <Link href="https://www.instagram.com/roble__rojo?igsh=NzRiNDk0ZzQ0enJ4&utm_source=qr" className="transition hover:text-[#2B2927]">
             Instagram
           </Link>
-          <a href="mailto:margicar@outlook.es" className="transition hover:text-[#2B2927]">
+          {/* <a href="mailto:margicar@outlook.es" className="transition hover:text-[#2B2927]">
             margicar@outlook.es
-          </a>
+          </a> */}
           <span>© 2026 Roble Rojo</span>
         </div>
       </div>

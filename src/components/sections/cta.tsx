@@ -25,9 +25,9 @@ export function Cta() {
               </p>
             </div>
             <div className="flex flex-wrap gap-3">
-              <Button href="mailto:margicar@outlook.es" variant="primary">
+              {/* <Button href="mailto:margicar@outlook.es" variant="primary">
                      margicar@outlook.es
-              </Button>
+              </Button> */}
               <Button href="https://www.instagram.com/roble__rojo?igsh=NzRiNDk0ZzQ0enJ4&utm_source=qr" variant="secondary">
                 Instagram
               </Button>
